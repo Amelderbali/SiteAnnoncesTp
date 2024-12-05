@@ -1,5 +1,6 @@
 package com.lumina.data;
 
+
 public class Annonce {
     private int id;
     private String titre;
@@ -8,8 +9,11 @@ public class Annonce {
     private String site;
     private String dateRecuperation;
 
-    public Annonce(int id, String titre, String lien, String image, String site, String dateRecuperation) {
-        this.id = id;
+
+    public Annonce(int id, String titre, String lien, String image, String site, String dateRecuperation) {}
+
+
+    public Annonce(String titre, String lien, String image, String site, String dateRecuperation) {
         this.titre = titre;
         this.lien = lien;
         this.image = image;
@@ -17,11 +21,7 @@ public class Annonce {
         this.dateRecuperation = dateRecuperation;
     }
 
-    public Annonce() {
 
-    }
-
-    // Getters et Setters
     public int getId() {
         return id;
     }
@@ -70,3 +70,4 @@ public class Annonce {
         this.dateRecuperation = dateRecuperation;
     }
 }
+

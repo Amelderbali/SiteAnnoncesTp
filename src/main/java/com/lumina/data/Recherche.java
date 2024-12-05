@@ -8,7 +8,7 @@ public class Recherche {
     private List<String> sites;
     private int frequence;
 
-    // Getters et Setters
+
     public int getId() {
         return id;
     }

@@ -47,7 +47,7 @@ public class TopAnnoncesWrapper implements SiteWrapper {
             if (annoncesNode.isArray()) {
                 for (JsonNode annonceNode : annoncesNode) {
                     if (annonceNode.has("idAnnonce")) { // Check if the ad has a valid ID
-                        Annonce annonce = new Annonce();
+                        Annonce annonce = new Annonce(rs.getInt("id"), rs.getString("titre"), rs.getString("lien"), rs.getString("image"), rs.getString("site"), rs.getString("date_recuperation"));
 
                         annonce.setId(annonceNode.get("idAnnonce").asInt());
 

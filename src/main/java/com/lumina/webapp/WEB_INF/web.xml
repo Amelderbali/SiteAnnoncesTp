@@ -1,0 +1,29 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.lumina.servlets.SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FakeSiteServlet</servlet-name>
+        <servlet-class>com.lumina.servlets.FakeSiteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FakeSiteServlet</servlet-name>
+        <url-pattern>/fakesite/search</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AnnonceDetailServlet</servlet-name>
+        <servlet-class>com.lumina.servlets.AnnonceDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AnnonceDetailServlet</servlet-name>
+        <url-pattern>/annonce/detail</url-pattern>
+    </servlet-mapping>
+
+</web-app>

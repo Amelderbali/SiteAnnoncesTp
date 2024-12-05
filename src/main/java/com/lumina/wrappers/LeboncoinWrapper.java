@@ -43,7 +43,7 @@ public class LeboncoinWrapper implements SiteWrapper {
             // Parcourt les annonces
             if (adsNode.isArray()) {
                 for (JsonNode ad : adsNode) {
-                    Annonce annonce = new Annonce();
+                    Annonce annonce = new Annonce(rs.getInt("id"), rs.getString("titre"), rs.getString("lien"), rs.getString("image"), rs.getString("site"), rs.getString("date_recuperation"));
                     annonce.setId(ad.get("list_id").asInt());
                     annonce.setTitre(ad.get("subject").asText());
                     annonce.setLien(ad.get("url").asText());
