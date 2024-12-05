@@ -26,16 +26,16 @@ public class FetchAndStoreJob implements Runnable {
     public void run() {
         try {
             System.out.println("Fetching annonces...");
-            // Fetch annonces from the wrapper
+
             List<Annonce> annonces = siteWrapper.fetchAnnonces(motsCles);
 
             System.out.println("Storing annonces in the database...");
-            // Store annonces in the database
+
             annonceDAO.insertAnnonces(annonces);
 
             System.out.println("Batch job completed successfully.");
 
-            // Notify listener with the fetched data
+
             if (listener != null) {
                 listener.onJobCompleted(annonces);
             }
